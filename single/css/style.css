@@ -1,0 +1,155 @@
+html, body{
+    height: 100%;
+    font-family: 'NanumSquareRound';
+}
+
+/* 헤더 메뉴 */
+.gnb{
+    width: 15%;
+    height: 100%;
+    background-color: white;
+    min-width: 250px;
+    max-width: 330px;
+    position: fixed;
+}
+.gnb_list ul{
+    width: 200px;
+    margin: 0px 0px 0px 10%;
+    padding-top: 50px;
+}
+.gnb_list ul > li{
+    width: 200px;
+    margin-bottom: 60px;
+    padding-left: 10px;
+    border-left: 0px solid #f90e77;
+    transition: border 0.2s;
+}
+
+.gnb_list a{
+    display: block;
+    color: rgb(41, 41, 41);
+    transition: color 0.3s;
+}
+
+.gnb_list a:hover{
+    color: #f90e77;
+}
+.gnb_list > ul > li:hover{
+    border-left: 5px solid #f90e77;
+    transition: border 0.3s;
+}
+.gnb_list ul > li:first-child{
+    margin-bottom: 100px;
+    padding-left: 0px;
+    transition: none;
+    border-left: none;
+}
+/* 헤더 메뉴 */
+
+/* 메인 배경 */
+.main_bg{
+    width: 85%;
+    height: 100%;
+    float: right;
+    background: url(../images/gb01.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+.clear{
+    clear: both;
+}
+/* 메인 배경 */
+
+/* 메인컨텐츠 */
+.main_cont1{
+    margin-left: 250px;
+}
+.cont1_reserv{
+    text-align: center;
+}
+.cont1_reserv .tit{
+    font-size: 1.5em;
+    padding-top: 120px;
+}
+.cont1_reserv .subTit{
+    color: rgb(105, 105, 105); 
+    font-size: 0.9em;
+    padding-top: 20px;
+}
+
+.reserv_kinds{
+    width: 100%;
+    margin: 30px 0px;
+    padding: 40px 0px;
+    background-color: #ecf0f2;
+}
+.reserv_kinds > ul{
+    text-align: center;
+}
+.reserv_kinds > ul > li{
+    width: 20%;
+    text-align: center;
+    display: inline-block;
+}
+.reserv_kinds > ul > li::after{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    border-bottom: 1px solid lightgray;
+    transition: all 0.3s;
+}
+.reserv_kinds > ul > li:hover::after{
+    width: 100px;
+    color: #f90e77;
+    border-bottom: 1.5px solid #f90e77;
+}
+.reserv_kinds > ul > li img{
+    filter: grayscale(100%);
+    transition: all 0.3s;
+}
+.reserv_kinds > ul > li:hover img{
+    filter: none;
+    transition: all 0.3s;
+    padding-top: 5px;
+}
+
+.reserv_kinds > ul > li img{
+    margin-bottom: 15px;
+}
+
+.reserv_kinds > ul > li p{
+    color: black;
+    transition: all 0.3s;
+}
+.reserv_kinds > ul > li:hover p{
+    color: #f90e77;
+    margin-top: -5px;
+}
+
+/* 메인컨텐츠 */
+
+
+
+/* media query */
+@media screen and (max-width: 1920px) {
+    body {
+      font-size: 20px;
+      transition: font-size 0.7s;
+      -webkit-transition: font-size 0.7s;
+      transition-timing-function: ease;
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    body {
+      font-size: 18px;
+    }
+    .reserv_kinds > ul > li{
+        width: 23%;
+    }
+  }
+
+    @media screen and (max-width: 1180px) {
+        .reserv_kinds img{
+            width: 30% !important;
+        }
+  }
